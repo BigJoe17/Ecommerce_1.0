@@ -7,7 +7,14 @@ import { ShopContext } from "../Context/ShopContext";
 
 function Navbar() {
   const [menu, setMenu] = useState("shop");
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // State for login status
   const { getTotalCartItems } = useContext(ShopContext);
+
+  // Function to handle logout
+  const handleLogout = () => {
+    // Perform logout logic here
+    setIsLoggedIn(false);
+  };
 
   return (
     <>
@@ -62,10 +69,14 @@ function Navbar() {
         </ul>
 
         <div className="login_cart">
-          <Link style={{ textDecoration: "none" }} to="/login">
-            {" "}
-            <button>Login</button>
-          </Link>
+          {/* Conditional rendering for login/logout button */}
+          {isLoggedIn ? (
+            <button onClick={handleLogout}>Logout</button>
+          ) : (
+            <Link style={{ textDecoration: "none" }} to="/login">
+              <button>Login</button>
+            </Link>
+          )}
           <Link to="/cart" style={{ textDecoration: "none" }}>
             <img src={cart_icon} alt="" />
           </Link>

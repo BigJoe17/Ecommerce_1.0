@@ -1,0 +1,37 @@
+.loginsignup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #9e9494;
+    position: relative;
+ 
+    
+}
+
+.loginsignup input {
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.loginsignup-container{
+    width: 40%;
+    height: 40%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.loginsignup-container button{
+    width: 70%;
+    padding: 10px;
+    position: relative;
+    left: 15%;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
